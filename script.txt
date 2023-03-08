@@ -1,0 +1,15 @@
+
+            function process()
+            {
+                var q = document.getElementById("quantity").value;
+                var st = "<?php echo $data['stock']; ?>";
+                var price = "<?php echo $data['price']; ?>";
+                var cost = q*price;
+                if(confirm("Click ok to move to bank page \n Quantity = "+q+"Kg\n Total Cost = "+cost+"Rs"))
+                {
+                    document.location.href="bank.html";
+                }
+                else{
+                    document.location.href="home.php";
+                }
+            }

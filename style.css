@@ -1,0 +1,153 @@
+.login{
+    background-color: darkslateblue;
+    color: aliceblue;
+    width: 600px;
+    height: 260px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.register{
+    background-color: darkslateblue;
+    color: aliceblue;
+    width: 600px;
+    height: 310px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.Home
+{
+    height: 40px;
+    width: 90%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-top: 23px;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: aqua;
+}
+
+.bank{
+    background-color: darkslateblue;
+    color: aliceblue;
+    width: 600px;
+    height: 380px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.username
+{
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.fieldset
+{
+    padding-left: 20px;
+}
+
+a{
+    color: chartreuse ;
+}
+
+.registerLink{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.logout
+{
+    background-color: rgb(255, 39, 39);
+    color: white;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    float: right;
+    margin-top: 41px;
+}
+
+.Add_to_cart_button
+{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(16, 200, 16);
+    color: white;
+    font-size: medium;
+    border:rgb(16, 200, 16) ;
+}
+
+.Place_Order_Button
+{   
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 255, 4);
+    color: white;
+    font-size: medium;
+    border:gray ;
+    margin: auto;
+    display: block;
+}
+
+.Remove_button
+{   
+    width: 100px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    border:gray ;
+    margin: auto;
+    display: block;
+}
+
+.last
+{
+    text-align: center;
+}
+
+.cart-icon
+{
+    text-align: right;
+    font-size: 34px;
+    float: right;
+    padding-right: 8px;
+    padding-top: 24px;
+    color: blue;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border: 5px solid black;
+    width: 95%;
+    margin-left: 30px;
+    margin-right: 80px;
+  }
+  
+  td, th {
+    border: 1px solid #b70e0e;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+img{
+    height: 280px;
+    width: 280px;
+    float: right;
+    margin-bottom: 5px;
+}

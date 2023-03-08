@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Banking Page
+        </title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <form class="bank" action="bank.php" method="post">
+            <fieldset class="fieldset">
+                <!-- <div>
+                    <img src="dummy.jpg" alt="">
+                </div> -->
+                <legend>
+                    <h2> Enter the Bank Details </h2>
+                </legend>
+                <label for="cardnumber">
+                    Enter Your Card Number:
+                </label><br>
+                <input type="number" name="cardno"><br/><br>
+                <label for="ccv">
+                    Enter CCV:
+                </label><br>
+                <input type="password" name="ccv" maxlength="3" size="3"><br><br>
+                <label for="expM">
+                    Enter Expiry Month & Year:
+                </label><br>
+                <input type="number" name="expM" style="width: 40px;">
+                <input type="number" name="expY" style="width: 40px;"><br><br>
+                <label for="name">
+                    Enter Your Name on the Card:
+                </label><br>
+                <input type="text" name="name"><br/><br>
+                <input type="submit" name="bank" value="Submit"><br>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
