@@ -7,7 +7,7 @@ if(isset($_POST['sub']))
 $uname = $_POST['username'];
 $upassword = $_POST['password'];
 $_SESSION['UserName'] = $uname;
-$res = mysqli_query($con,"select* from register where Username='$uname'and Password='$upassword'");
+$res = mysqli_query($con,"SELECT * FROM register WHERE Username='$uname' AND Password='$upassword'");
 // $numRows = mysqli_num_rows($res);
 if($res){
         header("Location:home.php");

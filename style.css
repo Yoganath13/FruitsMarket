@@ -111,9 +111,32 @@ a{
     display: block;
 }
 
-.last
+.Yes-or-no-button
+{
+  width: 90px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: rgb(32, 104, 236);
+  box-shadow: #b70e0e;
+  background-color: rgb(32, 104, 236);
+  color: #dddddd;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  font-size: large;
+
+}
+
+.Yes-or-no-button:hover
+{
+    background: linear-gradient(#1ed0af, #09cedc);
+}
+
+.last_page
 {
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    margin-top: 220px;
 }
 
 .cart-icon

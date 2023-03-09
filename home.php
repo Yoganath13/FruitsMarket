@@ -2,7 +2,8 @@
 <?php
 session_start();
     $con = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
-    $sql = mysqli_query($con,"SELECT * FROM stock");
+    $cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
+    $sql = mysqli_query($con,"SELECT * FROM inventory");
     $Username = $_SESSION['UserName'];
     // $data = mysqli_fetch_array($sql);
     ?>
@@ -27,8 +28,8 @@ session_start();
         </div>  
         <div class="Home">      
           Welcome to our super Market 
-    </div>
-    <br/>
+        </div>
+        <br/>
     <table style="table-layout: fixed;">
         <tr>
             <th>Id</th>
@@ -43,12 +44,12 @@ session_start();
                 {
             ?>
         <tr>
-            <form action="cart.php?id=<?=$data['Id']?>" method="post">
+            <form name="table" action="addtocart.php?id=<?=$data['Id']?>" method="post">
             <td><?php echo $data['Id'];?></td>
             <td><?php echo $data['Item'];?></td>
             <td><?php echo $data['price'];?></td>
             <td><?php echo $data['stock'];?></td>
-            <td><input type="number" name="quantity" id="quantity"></td>
+            <td><input type="number" name="quantity" id="quantity" required = "required"></td>
             <td><button type="submit" name="cart" class ="Add_to_cart_button">Add to Cart</button></td>
             </form>
         </tr>
