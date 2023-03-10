@@ -1,3 +1,4 @@
+![home](https://user-images.githubusercontent.com/80031405/224306232-eb23ef32-f488-434f-9724-4d147c364183.png)
 # Online-Fruits-Market-Website
 This repository is about an Online Fruits Market Website developed using HTML, CSS, MYSQL and PHP.
 If you are intrested to know how this website works, then follow steps below.
