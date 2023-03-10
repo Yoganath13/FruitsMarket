@@ -3,16 +3,16 @@ session_start();
 $username = $_SESSION['UserName'];
 $con  = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
 $cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
-if(isset($_POST['cart']))
+if(isset($_POST['Items']))
 {
 $quantity = $_POST['quantity'];
 $id = $_GET['id'];
-$sql2 = mysqli_query($con,"SELECT * from inventory where Id ='$id' ");
-$data = mysqli_fetch_array($sql2);
+$SelectQ = mysqli_query($con,"SELECT * from inventory where Id ='$id' ");
+$data = mysqli_fetch_array($SelectQ);
 $item = $data['Item'];
 $cost = $quantity * $data['price'];
 
-$sql2 = mysqli_query($cart_database,"INSERT INTO $username (`Item Id`,`Item`,`Quantity`,`Cost`)VALUES ('$id','$item','$quantity','$cost')");
+$Insert_to_DBQ = mysqli_query($cart_database,"INSERT INTO $username (`Item Id`,`Item`,`Quantity`,`Cost`)VALUES ('$id','$item','$quantity','$cost')");
 
 $check = mysqli_affected_rows($con);
 if($check > 0)

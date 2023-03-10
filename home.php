@@ -3,9 +3,8 @@
 session_start();
     $con = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
     $cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
-    $sql = mysqli_query($con,"SELECT * FROM inventory");
+    $InventoryQ = mysqli_query($con,"SELECT * FROM inventory");
     $Username = $_SESSION['UserName'];
-    // $data = mysqli_fetch_array($sql);
     ?>
 
 <html>
@@ -40,7 +39,7 @@ session_start();
             <th></th>
         </tr>
         <?php
-                while($data = mysqli_fetch_array($sql))
+                while($data = mysqli_fetch_array($InventoryQ))
                 {
             ?>
         <tr>
@@ -50,7 +49,7 @@ session_start();
             <td><?php echo $data['price'];?></td>
             <td><?php echo $data['stock'];?></td>
             <td><input type="number" name="quantity" id="quantity" required = "required"></td>
-            <td><button type="submit" name="cart" class ="Add_to_cart_button">Add to Cart</button></td>
+            <td><button type="submit" name="Items" class ="Add_to_cart_button">Add to Cart</button></td>
             </form>
         </tr>
         <?php 

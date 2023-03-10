@@ -2,13 +2,12 @@
 session_start();
 $con = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
 
-if(isset($_POST['sub']))
+if(isset($_POST['Login_Form']))
 {
 $uname = $_POST['username'];
 $upassword = $_POST['password'];
 $_SESSION['UserName'] = $uname;
 $res = mysqli_query($con,"SELECT * FROM register WHERE Username='$uname' AND Password='$upassword'");
-// $numRows = mysqli_num_rows($res);
 if($res){
         header("Location:home.php");
         exit();

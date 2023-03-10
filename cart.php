@@ -3,11 +3,11 @@ session_start();
 $table_name = $_SESSION['UserName'];
 $con  = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
 $cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
-if(isset($_POST['del']))
+if(isset($_POST['Cart_Form']))
 {
-    $Did = $_GET['delid'];
-    $Dsql = mysqli_query($cart_database,"DELETE FROM $table_name where Id ='$Did' ");
-    if($Dsql)
+    $Deleteid = $_GET['delid'];
+    $DeleteQ = mysqli_query($cart_database,"DELETE FROM $table_name where Id ='$Deleteid' ");
+    if($DeleteQ)
     {
         echo '<script>
                 alert("Item removed from the cart");
@@ -67,7 +67,7 @@ if(isset($_POST['del']))
             <td><?php echo $row['Item'];?></td>
             <td><?php echo $row['Quantity'];?></td>
             <td><?php echo $row['Cost'];?></td>
-            <td><button type="submit" name="del" class ="Remove_button">Remove</button></td>
+            <td><button type="submit" name="Cart_form" class ="Remove_button">Remove</button></td>
             </form>
             </tr>
             <?php 

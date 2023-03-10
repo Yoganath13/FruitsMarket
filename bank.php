@@ -3,7 +3,7 @@ session_start();
 $con = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
 $cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
 $Username1 = $_SESSION['UserName'];
-if(isset($_POST['bank']))
+if(isset($_POST['Bank_Form']))
 {
 $Cardno = $_POST['cardno'];
 $CCV = $_POST['ccv'];
@@ -63,22 +63,6 @@ if($numRows == 1)
                 window.location.href="bank.html";
                 </script>';
         }       
-        // $sql = mysqli_query($con,"SELECT * FROM stock");
-        // $data = mysqli_fetch_array($sql);
-        // $userQuan = $_SESSION['quans'];
-        // $Updstock =  $data['stock'] - $userQuan;
-        // $res1 = mysqli_query($con,"UPDATE stock SET stock='$Updstock' WHERE Id=1");
-        // if($res1)
-        // {
-        // header("Location:last.html");
-        // exit();
-        // }
-        // else{
-        //         echo '<script>
-        //         alert("Stock not updated");
-        //         window.location.href="home.php";
-        //         </script>';  
-        // }
 }
 else
 {
