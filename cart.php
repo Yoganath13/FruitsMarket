@@ -1,9 +1,9 @@
 <?php
 session_start();
 $table_name = $_SESSION['UserName'];
-$con  = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
-$cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
-if(isset($_POST['Cart_Form']))
+$con  = mysqli_connect("localhost","Yoganath","Admin","foodapp" );
+$cart_database = mysqli_connect("localhost","Yoganath","Admin","user_cart");
+if(isset($_POST['Cart_form']))
 {
     $Deleteid = $_GET['delid'];
     $DeleteQ = mysqli_query($cart_database,"DELETE FROM $table_name where Id ='$Deleteid' ");
@@ -39,7 +39,7 @@ if(isset($_POST['Cart_Form']))
             if($res_rows == 0)
             {
             ?>
-            <div style="text-align:center;">
+            <div class="Cart-Empty">
             <h1>Cart Is Empty!</h1>
             </div>
             <?php

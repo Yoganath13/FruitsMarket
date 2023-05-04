@@ -1,29 +1,73 @@
-<html>
-    <head>
-        <title>
-            FoodApp login page
-        </title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <form class="login" action="login.php" method="post">
-            <fieldset>
-                <legend>
-                    <h2> Welcome to Our Market </h2>
-                </legend>
-                <label for="username">
-                    Enter Your UserName:
-                </label><br>
-                <input type="text" name="username"><br/><br>
-                <label for="password">
-                    Enter Password:
-                </label><br>
-                <input type="password" name="password"><br><br>
-                <input type="submit" name="Login_Form" value="Login"><br>
-            </fieldset>
-            <div class="registerLink">
-                If your a new user, click here <a href="register.html">Register</a>   
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Fruits Market</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-1">
+            <form method="post" action="login.php" >
+                    <div class="Formtext">
+                        Login
+                    </div>
+                    <div class="Formtext">
+                    <input type="text" name="Lusername" placeholder="Username" required><br/><br>
+                </div>
+                    <div class="Formtext">
+                    <input type="password" name="Lpassword" placeholder="Password" required><br><br>
+                </div>
+                <div class="register-button">
+                    <input type="submit" name="Login_Form" value="Login"><br>
+                </div>
+            </form>
+        </div>
+        <div class="container-2">
+            <form method="post" action="register.php">
+                <div class="Formtext">
+                    Register
+                </div>
+                <div class="Formtext">
+                    <input type="text" name="Rusername" placeholder="Username" required><br/><br>
+                </div>
+                    <div class="Formtext">
+                    <input type="number" name="Rnumber" placeholder="Mobile number" required><br><br>
+                </div>
+                    <div class="Formtext">
+                    <input type="password" name="Rpassword" placeholder="Password" required><br><br>
+                </div>
+                <div class="register-button">
+                    <a href="login.html">
+                    <input type="submit" value="Create account">
+                </a>
+            </div>
+                <br>
+            </form>
+        </div>
+        <div class="container-3">
+        <h2>If you were Admin ? Please <a href="#admin">Click Here</a></h2>
+        <div id="admin">
+            <form method="post" action="admin.php" >
+                <a href="#" class="close">X</a> 
+                <div class="Formtext">
+                    Admin
+                </div>
+                <div class="Formtext">
+                <input type="text" name="Ausername" placeholder="Username" required><br/><br>
+            </div>
+                <div class="Formtext">
+                <input type="password" name="Apassword" placeholder="Password" required><br><br>
+            </div>
+            <div class="register-button">
+                <input type="submit" name="Admin_Form" value="Login"><br>
             </div>
         </form>
-    </body>
+        </div>
+    </div>
+    </div>
+</body>
 </html>

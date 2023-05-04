@@ -1,26 +1,16 @@
-.login{
-    background-color: darkslateblue;
-    color: aliceblue;
-    width: 600px;
-    height: 260px;
-    margin: auto;
-    margin-top: 30px;
+
+body{
+    background-image: url(background-image.jpg);
+    background-size: unset;
+    background-position: unset;
+    background-repeat: no-repeat;
 }
 
-.register{
-    background-color: darkslateblue;
-    color: aliceblue;
-    width: 600px;
-    height: 310px;
-    margin: auto;
-    margin-top: 30px;
-}
 
 .Home
 {
     height: 40px;
     width: 90%;
-    text-align: center;
     font-size: 30px;
     font-weight: bold;
     padding-top: 10px;
@@ -29,32 +19,19 @@
     margin-right: 20px;
     border-radius: 5px;
     background-color: aqua;
+    position: relative;
+    text-align: center;
 }
 
 .bank{
-    background-color: darkslateblue;
+
     color: aliceblue;
     width: 600px;
     height: 380px;
-    margin: auto;
-    margin-top: 30px;
     padding: 20px;
-}
-
-.username
-{
-    margin-top: 10px;
-    margin-left: 5px;
-    text-align: left;
-}
-
-.fieldset
-{
-    padding-left: 20px;
-}
-
-a{
-    color: chartreuse ;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .registerLink{
@@ -74,7 +51,7 @@ a{
     cursor: pointer;
     border: none;
     float: right;
-    margin-top: 41px;
+    margin-top: 52px;
 }
 
 .Add_to_cart_button
@@ -131,12 +108,68 @@ a{
     background: linear-gradient(#1ed0af, #09cedc);
 }
 
+.register-button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Submit-Address-Button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Submit-Address-Button button
+{
+    margin: 10px;
+    width: 119px;
+    height: 51px;
+    background-color: rgb(32,104,236,1);
+    color: white;
+    font-size: medium;
+    border:gray ;
+    border-radius: 5px;
+}
+
+.register-button input
+{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border-color: #264E86;
+    box-shadow: #000000;
+    background-color: #09cedc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .last_page
 {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     margin-top: 220px;
+    color: aliceblue;
+}
+
+.Cart-Empty
+{
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.username{
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20pt;
 }
 
 .cart-icon
@@ -144,9 +177,10 @@ a{
     text-align: right;
     font-size: 34px;
     float: right;
-    padding-right: 8px;
-    padding-top: 24px;
+    padding-right: 10px;
     color: blue;
+    position: absolute;
+    right: 0;
 }
 
 table {
@@ -156,21 +190,197 @@ table {
     width: 95%;
     margin-left: 30px;
     margin-right: 80px;
+    color: #dddddd;
+    font-size: larger;
   }
   
   td, th {
-    border: 1px solid #b70e0e;
+    border: 1px solid #000000;
     text-align: center;
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
+  tr {
+    background-color: rgba(17, 17, 17,0.54);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
 
-img{
-    height: 280px;
-    width: 280px;
-    float: right;
-    margin-bottom: 5px;
+  .Formtext{
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+
+  ::placeholder
+  {
+    color: antiquewhite;
+  }
+
+  .bank-bodybg
+  {
+    background-image: url(card-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bank-bg
+  {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.wrapper
+{
+    width: 850px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+.container-1
+{
+    width: 300px;
+    height: 350px;
+    color: #264E86;
+    background-color :rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.container-2
+{
+    width: 300px;
+    height: 350px;
+    color: #264E86;
+    background-color: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.Formtext input{
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 25px;
+    color:  #ffffff;
+    padding: 3px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+
+#admin{
+    display: none;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#admin:target
+{
+display: block;
+width: auto;
+height: 222px;
+}
+
+.close{
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: red;
+    position: absolute;
+    right: 0;
+}
+
+.container-3 a
+{
+    text-decoration: none;
+    color: aliceblue;
+}
+.container-3{
+    background-color: rgba(17, 17, 17, 0.54);
+     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.AdminHome ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+}
+
+.AdminHome li{
+    float: left;
+}
+
+.AdminHome li a{
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.AdminHome li a:hover
+{
+    background-color: #111;
+}
+
+.active
+{
+    background-color: #09cedc;
+}
+
+.Insert
+{
+    padding-bottom: 25px;
+}
+
+.update-bg
+{
+    background-color: rgba(17,17,17,0.54);
+}
+
+.address textarea
+{
+    width: 500px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #000000;
+  font-size: 16px;
+  resize: none;
+  color: #ffffff;
 }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost","Yoganath","Admin","FoodApp" );
+$con = mysqli_connect("localhost","Yoganath","Admin","foodapp" );
 $cart_database = mysqli_connect("localhost","Yoganath","Admin","User_Cart");
 $Username1 = $_SESSION['UserName'];
 if(isset($_POST['Bank_Form']))
@@ -42,9 +42,39 @@ if($numRows == 1)
                         $checkQ = mysqli_affected_rows($con);
                         if($checkQ > 0)
                         {
-                                $sql7 = mysqli_query($con,"INSERT INTO ownbank (`UserName`,`BB`) VALUES ('$Username1','$total')");
-                                header("Location:last.html");
+                                $custidQ = mysqli_query($con,"SELECT CustId FROM register WHERE Username='$Username1' ");
+                                $custdata = mysqli_fetch_assoc($custidQ);
+                                $custid = $custdata['CustId'];
+                                $_SESSION['Customerid'] = $custid;
+                                if(!empty($custid))
+                                {
+                                   $InOrderQ = mysqli_query($con,"INSERT INTO orderdetails(`CustId`,`Amount`) VALUES ('$custid','$total')");        
+                                }
+                                else{
+                                        echo '<script>
+                                        alert("Error in executing query : InOrderQ");
+                                        window.location.href="bank.html";
+                                        </script>';
+                                }
+                                $orderidQ = mysqli_query($con,"SELECT OrderId FROM orderdetails WHERE CustId = $custid ORDER BY OrderId DESC LIMIT 1");
+                                $orderiddata = mysqli_fetch_assoc($orderidQ);
+                                $orderid = $orderiddata['OrderId'];
+                                $_SESSION['Ordid'] = $orderid;
+                                $sql7 = mysqli_query($con,"INSERT INTO ownbank (`UserName`,`BB`,`CustId`,`OrderId`) VALUES ('$Username1','$total','$custid','$orderid')");
+                                $ordertable = mysqli_query($cart_database,"SELECT * FROM $Username1");
+                                while($orderdata = mysqli_fetch_array($ordertable))
+                                {
+                                        $orderidQ = mysqli_query($con,"SELECT OrderId FROM orderdetails WHERE CustId = $custid ORDER BY OrderId DESC LIMIT 1");
+                                        $orderiddata = mysqli_fetch_assoc($orderidQ);
+                                        $orderid = $orderiddata['OrderId'];
+                                        $itemid = $orderdata['Item Id'];
+                                        $itemnum = $orderdata['Id'];
+                                        $quantity = $orderdata['Quantity'];
+                                        $price = $orderdata['Cost'];
+                                        $InOIQ = mysqli_query($con,"INSERT INTO orders(`OrderId`,`ItemId`,`Itemnum`,`Quantity`,`Price`) VALUES ('$orderid','$itemid','$itemnum','$quantity','$price')");
+                                }
                                 $sql6 = mysqli_query($cart_database,"TRUNCATE TABLE $Username1");
+                                header("Location:Address.html");
                                 exit();
                         }
                 }

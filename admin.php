@@ -1,13 +1,13 @@
 <?php
 session_start();
 $con = mysqli_connect("localhost","Yoganath","Admin","foodapp" );
-$uname = $_POST['Lusername'];
-$upassword = $_POST['Lpassword'];
+$uname = $_POST['Ausername'];
+$upassword = $_POST['Apassword'];
 $_SESSION['UserName'] = $uname;
-$res = mysqli_query($con,"SELECT * FROM register WHERE Username ='$uname' AND Password ='$upassword'");
+$res = mysqli_query($con,"SELECT * FROM admin WHERE Username ='$uname' AND Password ='$upassword'");
 $count = mysqli_num_rows($res);
 if($count == 1){
-        header("Location:home.php");
+        header("Location:AdminHome.php");
         exit();
 }
 else
